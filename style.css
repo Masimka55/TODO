@@ -1,0 +1,120 @@
+@import url(./reset.css);
+.wrapper{
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.form-task{
+    margin-bottom: 8px;
+}
+.task{
+    position: relative;
+    display: block;
+    width: 460px;
+    padding: 15px 0 ;
+    background-color: #fff;
+    border: 1px solid #989898;
+    border-radius: 6px;
+}
+.text{
+padding: 0 12px;
+font-size: 18px;
+}
+.add,
+.delete{
+    position: absolute;
+    right: 40px;
+    top:10px;
+}
+.add::after,
+.delete::after{
+    content: "";
+    position: absolute;
+     width: 18px; 
+     height: 1px; 
+     background: gray;
+     top :9px;
+}
+.delete::after,
+.delete::before{
+    transform: rotate(45deg);
+}
+.add::before,
+.delete::before{
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 1px; 
+    height: 18px; 
+    background: gray;
+  
+}
+.todo-list__item{
+   position: relative;
+    background-color: #fff;
+    border: 1px solid #989899;
+    border-radius: 6px;
+   width: 460px;
+   padding: 12px 45px;
+}
+.todo-list__item:not(:last-child){
+    margin-bottom: 8px;
+}
+.checkbox{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.checkbox-view{
+    display: block;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: 1px solid #998899;
+    top: 11px;
+    left: 11px;
+    position: absolute;
+}
+.checkbox-view::after{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #C4C4C4;
+    border-radius: 50%;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    display: none;
+}
+
+.checkbox:checked ~ .checkbox-view::after{
+    display: block;
+    
+}
+  
+.todo-list__item:has(.checkbox:checked){
+    background-color: #F4F4F4;
+}
+.priority-high{
+    margin-bottom: 12px;
+}
+.title{
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.user-list{
+    background-color: rgb(85, 79, 79);
+    padding: 25px 8px 198px;
+    max-width: 476px;
+    margin: 60px auto;
+}
