@@ -20,11 +20,13 @@
   padding: 0 12px;
   font-size: 18px;
 }
-.add,
+
+/* .add,
 .delete {
   position: absolute;
   right: 40px;
   top: 10px;
+  
 }
 .add {
   top: 15px;
@@ -51,7 +53,44 @@
   width: 1px;
   height: 18px;
   background: #998899;
+} */
+.add,
+.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  top: 12px;
+  right: 12px;
 }
+.add::before,
+.add::after,
+.close::before,
+.close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 1px;
+  background: #998899;
+}
+
+.close:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.add::before {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.add:after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
 .todo-list__item {
   position: relative;
   background-color: #fff;
@@ -120,3 +159,4 @@
   max-width: 476px;
   margin: 60px auto;
 }
+
