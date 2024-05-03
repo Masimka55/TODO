@@ -4,83 +4,36 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+.user-list {
+  background-color: rgb(85, 79, 79);
+  padding: 25px 8px 198px;
+  width: 476px;
+  margin: 60px auto;
+}
 .form-task {
   margin-bottom: 8px;
 }
-.task {
-  position: relative;
-  display: block;
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 10px;
   background-color: #fff;
   border: 1px solid #989898;
   border-radius: 6px;
 }
+
 .text {
   padding: 0 12px;
   font-size: 18px;
 }
 
-/* .add,
-.delete {
-  position: absolute;
-  right: 40px;
-  top: 10px;
-  
-}
-.add {
-  top: 15px;
-}
-
-.add::after,
-.delete::after {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 1px;
-  background:#998899;
-  top: 9px;
-}
-.delete::after,
-.delete::before {
-  transform: rotate(45deg);
-}
-.add::before,
-.delete::before {
-  content: '';
-  position: absolute;
-  left: 9px;
-  width: 1px;
-  height: 18px;
-  background: #998899;
-} */
-.add,
-.close {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
-  top: 12px;
-  right: 12px;
-}
-.add::before,
-.add::after,
-.close::before,
-.close::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 18px;
-  height: 1px;
-  background: #998899;
-}
-
-.close:before {
+.delete-task:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.close:after {
+.delete-task:after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -92,16 +45,45 @@
 }
 
 .todo-list__item {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   background-color: #fff;
   border: 1px solid #989899;
   border-radius: 6px;
   width: 100%;
-  padding: 12px 45px;
+  padding: 12px 10px;
+}
+.flex-content{
+  display: flex;
+}
+.task-high,
+.task-low {
+  width: 370px;
+ padding-right: 25px;
+}
+
+.add,
+.delete-task {
+  position: relative;
+  border: 1px solid red;
+  width: 19px;
+  height: 19px;
+  font-size: 0;
+}
+.add::before,
+.add::after,
+.delete-task::before,
+.delete-task::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  background: #998899;
 }
 .todo-list__item:not(:last-child) {
   margin-bottom: 8px;
 }
+
 .checkbox {
   position: absolute;
   width: 1px;
@@ -114,21 +96,20 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .checkbox-view {
   display: block;
-  width: 21px;
-  height: 21px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 1px solid #998899;
-  top: 11px;
-  left: 11px;
-  position: absolute;
+  position: relative;
 }
 .checkbox-view::after {
   content: '';
   position: absolute;
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   background-color: #c4c4c4;
   border-radius: 50%;
   top: 50%;
@@ -142,7 +123,7 @@
 }
 
 .todo-list__item:has(.checkbox:checked) {
-  background-color: #332f47;
+  background-color: #99889257;
 }
 .priority-high {
   margin-bottom: 12px;
@@ -153,10 +134,7 @@
   text-align: center;
 }
 
-.user-list {
-  background-color: rgb(85, 79, 79);
-  padding: 25px 8px 198px;
-  max-width: 476px;
-  margin: 60px auto;
+.checkbox-label {
+  padding-right: 12px;
 }
 

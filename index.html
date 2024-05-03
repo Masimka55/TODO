@@ -13,41 +13,37 @@
           <div class="priority-high">
             <h2 class="riority-high__title title">High</h2>
             <div class="form-task">
-              <form class="" action="#" method="post">
-                <label class="high task">
-                  <input class="high__text text" type="text" placeholder="Добавить важных дел" />
-                  <button  class="add" type="button" title="Добавить"></button>
-                </label>
+              <form class="form" action="#" method="post">
+                <input class="high__text text" type="text" placeholder="Добавить важных дел" />
+                <button class="add" type="button" title="Добавить"></button>
               </form>
             </div>
 
             <ul class="todo-list high-list">
               <li class="todo-list__item">
-               
-                <label class="checkbox-label">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="checkbox-view"></span>
-                  Вот вам и супер интересная тема. Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной программы.
-                </label>
-                <button class="close" type="button" title="закрыть"></button>
-              </li>
+                <div class="flex-content">
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox" />
+                    <span class="checkbox-view"></span>
+                  </label>
+                  <p class="task-high">
+                    Вот вам и супер интересная тема. Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной программы.
+                  </p>
+                </div>
+                <button class="delete-task" type="button" title="Удалить"></button>
 
-              <li class="todo-list__item">
-                Сверстать этот TODO list
-                <label class="checkbox-label">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="checkbox-view"></span>
-                </label>
-                <button class="close" type="button" title="закрыть"></button>
-              </li>
-              
-              <li class="todo-list__item">
-                Начать делать задачу
-                <label class="checkbox-label">
-                  <input type="checkbox" class="checkbox" checked />
-                  <span class="checkbox-view"></span>
-                </label>
-                <button class="close" type="button" title="закрыть"></button>
+                <li class="todo-list__item">
+                  <div class="flex-content">
+                    <label class="checkbox-label">
+                      <input type="checkbox" class="checkbox" />
+                      <span class="checkbox-view"></span>
+                    </label>
+                    <p class="task-high">
+                      Посмотреть кино
+                    </p>
+                  </div>
+                  <button class="delete-task" type="button" title="Удалить"></button>
+                </li>
               </li>
             </ul>
           </div>
@@ -55,22 +51,25 @@
           <div class="priority-low">
             <h2 class="priority-low__title title">Low</h2>
             <div class="form-task">
-              <form  action="#" method="post">
+              <form class="form" action="#" method="post">
                 <label class="high task">
                   <input class="high__text text" type="text" placeholder="Добавить важных дел" />
-                  <button  class="add" type="button" title="Добавить"></button>
                 </label>
+
+                <button class="add" type="button" title="Добавить"></button>
               </form>
             </div>
 
             <ul class="todo-list low-list">
               <li class="todo-list__item">
-                Посмотреть ютубчик
-                <label class="checkbox-label">
-                  <input type="checkbox" class="checkbox" />
-                  <span class="checkbox-view"></span>
-                </label>
-                <button class="close" type="button" title="закрыть"></button>
+                <div class="flex-content">
+                  <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox" />
+                    <span class="checkbox-view"></span>
+                  </label>
+                  <p class="task-high">Lorem ipsum, dolor</p>
+                </div>
+                <button class="delete-task" type="button" title="Удалить"></button>
               </li>
             </ul>
           </div>
