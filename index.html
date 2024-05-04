@@ -15,35 +15,42 @@
             <div class="form-task">
               <form class="form" action="#" method="post">
                 <input class="high__text text" type="text" placeholder="Добавить важных дел" />
-                <button class="add" type="button" title="Добавить"></button>
+                <button class="add" type="submit" title="Добавить"></button>
               </form>
             </div>
 
             <ul class="todo-list high-list">
-              <li class="todo-list__item">
-                <div class="flex-content">
-                  <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" />
-                    <span class="checkbox-view"></span>
+              <li class="todo-list__item item">
+                <label class="item__checkbox-label">
+                    <input type="checkbox" class="item__checkbox" />
+                    <span class="item__checkbox-done"></span>
                   </label>
-                  <p class="task-high">
-                    Вот вам и супер интересная тема. Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной программы.
+                  <p class="item__task-high task-todo">
+                    Учить задачи
                   </p>
-                </div>
-                <button class="delete-task" type="button" title="Удалить"></button>
+                <button class="item__delete-task" type="button" title="Удалить"> </button>
+              </li>
 
-                <li class="todo-list__item">
-                  <div class="flex-content">
-                    <label class="checkbox-label">
-                      <input type="checkbox" class="checkbox" />
-                      <span class="checkbox-view"></span>
-                    </label>
-                    <p class="task-high">
-                      Посмотреть кино
-                    </p>
-                  </div>
-                  <button class="delete-task" type="button" title="Удалить"></button>
-                </li>
+              <li class="todo-list__item item">
+                <label class="item__checkbox-label">
+                    <input type="checkbox" class="item__checkbox" />
+                    <span class="item__checkbox-done"></span>
+                  </label>
+                  <p class="item__task-high task-todo">
+                    Учить задачи Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed maxime vero ducimus ipsum velit. Maiores distinctio molestiae ullam. Placeat dolore doloribus temporibus? Odit est dicta et. Ratione, eum accusamus.
+                  </p>
+                <button class="item__delete-task" type="button" title="Удалить"> </button>
+              </li>
+
+              <li class="todo-list__item item">
+                <label class="item__checkbox-label">
+                    <input type="checkbox" class="item__checkbox" />
+                    <span class="item__checkbox-done"></span>
+                  </label>
+                  <p class="item__task-high task-todo">
+                    Учить задачи Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sed maxime vero ducimus ipsum velit. Maiores distinctio molestiae ullam. Placeat dolore doloribus temporibus? Odit est dicta et. Ratione, eum accusamus.
+                  </p>
+                <button class="item__delete-task" type="button" title="Удалить"> </button>
               </li>
             </ul>
           </div>
@@ -52,24 +59,21 @@
             <h2 class="priority-low__title title">Low</h2>
             <div class="form-task">
               <form class="form" action="#" method="post">
-                <label class="high task">
-                  <input class="high__text text" type="text" placeholder="Добавить важных дел" />
-                </label>
-
-                <button class="add" type="button" title="Добавить"></button>
+                <input class="high__text text" type="text" placeholder="Добавить важных дел" />
+                <button class="add" type="submit" title="Добавить"></button>
               </form>
             </div>
 
             <ul class="todo-list low-list">
-              <li class="todo-list__item">
-                <div class="flex-content">
-                  <label class="checkbox-label">
-                    <input type="checkbox" class="checkbox" />
-                    <span class="checkbox-view"></span>
+              <li class="todo-list__item item">
+                <label class="item__checkbox-label">
+                    <input type="checkbox" class="item__checkbox" />
+                    <span class="item__checkbox-done"></span>
                   </label>
-                  <p class="task-high">Lorem ipsum, dolor</p>
-                </div>
-                <button class="delete-task" type="button" title="Удалить"></button>
+                  <p class="item__task-low task-todo">
+                    Учить задачи 
+                  </p>
+                <button class="item__delete-task" type="button" title="Удалить"> </button>
               </li>
             </ul>
           </div>

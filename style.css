@@ -30,11 +30,47 @@
   font-size: 18px;
 }
 
-.delete-task:before {
+.todo-list__item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #989899;
+  border-radius: 6px;
+  width: 100%;
+  padding: 12px 10px;
+}
+.todo-list__item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.task-todo{
+  padding-right: 25px;
+  width: 100%;
+}
+
+.add,
+.item__delete-task {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  min-width: 19px;
+}
+
+.add::before,
+.add::after,
+.item__delete-task::before,
+.item__delete-task::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 1px;
+  background: #998899;
+}
+.item__delete-task:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.delete-task:after {
+.item__delete-task:after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
@@ -45,47 +81,11 @@
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.todo-list__item {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border: 1px solid #989899;
-  border-radius: 6px;
-  width: 100%;
-  padding: 12px 10px;
+.item__checkbox-label{
+  padding-right: 12px;
+  display: inline-block;
 }
-.flex-content{
-  display: flex;
-}
-.task-high,
-.task-low {
-  width: 370px;
- padding-right: 25px;
-}
-
-.add,
-.delete-task {
-  position: relative;
-  border: 1px solid red;
-  width: 19px;
-  height: 19px;
-  font-size: 0;
-}
-.add::before,
-.add::after,
-.delete-task::before,
-.delete-task::after {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 1px;
-  background: #998899;
-}
-.todo-list__item:not(:last-child) {
-  margin-bottom: 8px;
-}
-
-.checkbox {
+.item__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -97,16 +97,15 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.checkbox-view {
-  display: block;
+.item__checkbox-done {
+  display: inline-block;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid #998899;
   position: relative;
 }
-.checkbox-view::after {
+.item__checkbox-done::after {
   content: '';
   position: absolute;
   width: 14px;
@@ -116,14 +115,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: none;
+  opacity: 0;
 }
 
-.checkbox:checked ~ .checkbox-view::after {
-  display: block;
+.item__checkbox:checked ~ .item__checkbox-done::after {
+  opacity: 1;
 }
 
-.todo-list__item:has(.checkbox:checked) {
+.todo-list__item:has(.item__checkbox:checked) {
   background-color: #99889257;
 }
 .priority-high {
@@ -135,7 +134,4 @@
   text-align: center;
 }
 
-.checkbox-label {
-  padding-right: 12px;
-}
 
