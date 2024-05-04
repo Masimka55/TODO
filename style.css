@@ -123,7 +123,7 @@
 }
 
 .todo-list__item:has(.item__checkbox:checked) {
-  background-color: #99889257;
+  background-color: #FFE4E1
 }
 .priority-high {
   margin-bottom: 12px;
